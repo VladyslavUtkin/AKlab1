@@ -1,0 +1,60 @@
+From 0403c5fc4d4c2fa7d96be6af71e8bbaea24ab89e Mon Sep 17 00:00:00 2001
+From: Sergii Piatakov <sergii.piatakov@globallogic.com>
+Date: Thu, 15 Nov 2018 15:26:35 +0200
+Subject: [PATCH 2/2] formatting: use tabs instead of spaces
+
+Signed-off-by: Sergii Piatakov <sergii.piatakov@globallogic.com>
+---
+ calculator.cpp | 12 ++++++++++--
+ calculator.h   |  6 +++---
+ 2 files changed, 13 insertions(+), 5 deletions(-)
+
+diff --git a/calculator.cpp b/calculator.cpp
+index a1992a5..37e645c 100644
+--- a/calculator.cpp
++++ b/calculator.cpp
+@@ -2,7 +2,7 @@
+ 
+ int Calculator::Add (double a, double b)
+ {
+-<<<<<<< HEAD
++
+     return a + b;
+ =======
+ 	return a + b + 0.5;
+@@ -10,6 +10,14 @@ int Calculator::Add (double a, double b)
+ }
+ 
+ int Calculator::Sub (double a, double b)
++{
++	return Add (a, -b);
++=======
++	return a + b;
++}
+ 
+-    return Add (a, -b);
++int Calculator::Sub (double a, double b)
++{
++	return Add (a, -b);
++>>>>>>> cbcb06d (formatting: use tabs instead of spaces)
+ }
+diff --git a/calculator.h b/calculator.h
+index 3740907..d59d596 100644
+--- a/calculator.h
++++ b/calculator.h
+@@ -3,9 +3,9 @@
+ 
+ class Calculator
+ {
+-    public:
+-        int Add (double, double);
+-        int Sub (double, double);
++	public:
++		int Add (double, double);
++		int Sub (double, double);
+ };
+ 
+ #endif//CALCULATOR_H
+-- 
+2.33.1.windows.1
+
